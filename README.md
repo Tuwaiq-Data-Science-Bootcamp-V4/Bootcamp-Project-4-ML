@@ -1,22 +1,50 @@
-# Date Fruit Datasets Machine Learning
+# تمور السعودية 🌱
 
 
-## Team Members:
-| **Hajar** | **Teaf** | **Rayan** | duties
+## اعضاء الفريق:
+| **هاجر** | **طيف** | **ريان** | تفاصيل
 |:---------:|:--------:|:---------:|------:
 |                  |                  |:white_check_mark:|EDA
 |:white_check_mark:|                | |Handling Outliers
 |:white_check_mark:|:white_check_mark:| |Building Models
-|                  |                  |:white_check_mark:|README file
+|                  |:white_check_mark:|:white_check_mark:|Dashboard file
+|                  |:white_check_mark:|:white_check_mark:|README file
+                                                      
+                                                                                                       
 
 
-## Goal:
-Saudi Arabia is currently focusing on localizing factories. It is important to note that Saudi Arabia has the largest Dates fruit farms worldwide. We have obtained a dataset containing various metrics for 7 types of Dates: Barhee, Deglet Nour, Sukkary, Rotab Mozafati, Ruthana, Safawi, and Sagai. Our belief is that by utilizing machine learning techniques, we can help Saudi factories categorize the different types of Dates efficiently using AI intelligence. This approach is expected to result in cost and time savings.
+## الفكرة والهدف ⚙️:
+تركز المملكة العربية السعودية حاليًا على توطين المصانع. ومن المهم أن نلاحظ أن المملكة العربية السعودية لديها أكبر مزارع التمور في العالم. لقد حصلنا على مجموعة بيانات تحتوي على مقاييس مختلفة لسبعة أنواع من التمور: البرحي، ودجلة نور، والسكري، ورطب مظفاتي، وروثانا، والصفاوي، والصقعي. إيماننا هو أنه من خلال استخدام تقنيات التعلم الآلي، يمكننا مساعدة المصانع السعودية على تصنيف أنواع التمور المختلفة بكفاءة باستخدام الذكاء الاصطناعي. ومن المتوقع أن يؤدي هذا النهج إلى توفير التكلفة والوقت.
+
+سيقوم الداشبورد بعرض التمور المختلفة ومعلومات مفصلة عن كل نوع سيتمكن المستخدمون من اختيار النوع المطلوب والحصول على تفاصيل تفصيلية عنه.
+ستساعد هذه المعلومات المصانع السعودية في اتخاذ قرارات أفضل وفعالة بخصوص إنتاج التمور وتصنيفهاوالمساعدة في تحسين مواسم التمور بناءً على الطلب والاحتياجات السوقية. يهدف الداشبورد بالتالي إلى تحسين عمليات الإنتاج والتسويق للتمور في المملكة العربية السعودية، وبالتالي تعزيز النمو الاقتصادي والاستدامة في قطاع التمور في البلاد.
+
+## مصدر البيانات :
+البيانات تحتوي على عدد كبير من المعلومات الخاصه بالتمور والمكونه من ٨٩٨ سجل، مما يجعلها مفيده في بناء موديل ممتاز.
 
 
-## Dataset 
- [Kaggle: Date Fruit Datasets](https://www.kaggle.com/datasets/muratkokludataset/date-fruit-datasets)
 
-<img src='pic/1.png'>
-<img src='pic/2.png'>
-<img src='pic/6.png'>
+[Kaggle: Date Fruit Datasets](https://www.kaggle.com/datasets/muratkokludataset/date-fruit-datasets)
+
+
+
+## الخوارزميات المختارة :
+- Support Vector Machine
+- KNN
+- Random Forest Classifier
+- Logistic Regression 
+### دقه الخوارزميات المختارة :
+| Structured   | Semi-Structresd |
+|---|---|
+| Support Vector Machine.   | ٩٠٪  |
+| KNN. | ٨٩٪  |
+| Random Forest Classifier.   | ٩١٪  |
+| Logistic Regression. | ٩٠٪  |
+
+
+## معلومات مهمه عن المعلومات :
+
+
+                                                      
+<img src='pic/1.png' alt="Image" width="800px" height= "800px">
+<img src='pic/2.png' alt="Image" width="800px" height= "800px">
