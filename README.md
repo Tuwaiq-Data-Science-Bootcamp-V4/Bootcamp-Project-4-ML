@@ -48,7 +48,10 @@
 |:---------:|:--------:|:---------:|------:
 |                  |                  |:white_check_mark:|EDA
 |:white_check_mark:|                | |Handling Outliers
-|:white_check_mark:|:white_check_mark:| |Building Models
+|:white_check_mark:| | |SVM
+|:white_check_mark:| | |KNN
+| |:white_check_mark:| |andom Forest Classifier.
+|:white_check_mark:| | |Logistic Regression.
 |                  |:white_check_mark:|:white_check_mark:|Dashboard file
 |                  |:white_check_mark:|:white_check_mark:|README file
   
