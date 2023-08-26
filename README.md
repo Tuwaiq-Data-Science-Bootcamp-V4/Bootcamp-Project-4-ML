@@ -73,7 +73,7 @@ https://www.kaggle.com/datasets/turkibintalib/saudi-arabia-used-cars-dataset
 - RMSE: 46931.44
 
 ### This plot shows how all of the 3 algorithms predictions compared
-<img src = "img/plot.png" width = 700 height = 1000>
+<img src = "img/plot.png" width = 800 height = 1000>
 
 ### **Conclusion and findings**
 In our case using Random forest regression had the best accuracy of predicting cars prices with an R^2 value of 0.76, considering the cars market and since everyone decides for him the price he wants for his car we think ~20% change in the price of a car is expected considering some other features that were not available in this data set.
@@ -82,25 +82,25 @@ In our case using Random forest regression had the best accuracy of predicting c
 
 
 #### 1. Cars Percentages based on Options
-<img src = "img/1.png" width = 700 height = 1000>
+<img src = "img/1.png" width = 600 height = 400>
 
 #### 2. Cars Percentages based on Gear Type
-<img src = "img/2.png" width = 700 height = 1000>
+<img src = "img/2.png" width = 600 height = 400>
 
 #### 3. Cars Price distribution for Mazda
-<img src = "img/3.png" width = 700 height = 1000>
+<img src = "img/3.png" width = 600 height = 400>
 
 #### 4. Top 10 Used Cars for sale 
-<img src = "img/4.png" width = 700 height = 1000>
+<img src = "img/4.png" width = 600 height = 400>
 
 #### 5. Price Comparison between Top 5 Makers
-<img src = "img/5.png" width = 700 height = 1000>
+<img src = "img/5.png" width = 600 height = 400>
 
 #### 6. Negotiable vs Non-Negotiable Cars Prices based on Options
-<img src = "img/6.png" width = 700 height = 1000>
+<img src = "img/6.png" width = 600 height = 400>
 
 #### 7. Cars Distribution of Prices for Mazda 
-<img src = "img/7.png" width = 700 height = 1000>
+<img src = "img/7.png" width = 600 height = 400>
 
 #### 8. Cars Distribution of Prices for Hyundai
-<img src = "img/8.png" width = 700 height = 1000>
+<img src = "img/8.png" width = 600 height = 400>
