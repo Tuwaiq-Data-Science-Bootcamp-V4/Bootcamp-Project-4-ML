@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Price Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .top-bar {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spinner {
+            display: none;
+        }
+
+        .form-control {
+            width: 250px; 
+        }
+
+        .narrow-container {
+            max-width: 780px; 
+            margin: 0 auto;
+        }
+
+        .narrow-container .form-control,
+        .narrow-container .btn {
+            padding: 6px;
+            font-size: 16px;
+        }
+
+        .airlines-dropdown {
+            width: 250px; 
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <h2><i class="fas fa-plane"></i> Flight Price Prediction</h2>
+    </div>
+    <div class="overlay">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="container mt-3 narrow-container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <div class="form-group airlines-dropdown">
+                        <label for="airlines">Airlines</label>
+                        <select class="form-control" id="airlines">
+                            <option value="Air India">Air India</option>
+                            <option value="AirAsia">AirAsia</option>
+                            <option value="GO FIRST">GO FIRST</option>
+                            <option value="Indigo">Indigo</option>
+                            <option value="Vistara">Vistara</option>
+                            <option value="SpiceJet">SpiceJet</option>
+                            <option value="Trujet">Trujet</option>
+                            <option value="StarAir">StarAir</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="departure">Departure City</label>
+                        <select class="form-control" id="departure">
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="arrival">Arrival City</label>
+                        <select class="form-control" id="arrival">
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ticket Type</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="ticketType" id="economy" value="economy" checked>
+                            <label class="form-check-label" for="economy"><i class="fas fa-coins"></i> Economy</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="ticketType" id="business" value="business">
+                            <label class="form-check-label" for="business"><i class="fas fa-briefcase"></i> Business</label>
+                        </div>
+                    </div>
+                   
+                    <button class="btn btn-primary" onclick="predictPrice()">Predict Price</button>
+                    <div class="spinner">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                    <p class="mt-3" id="predictionResult"></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <div class="form-group">
+                        <label for="departureDate">Departure Date</label>
+                        <input type="date" class="form-control" id="departureDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="stops">Number of Stops</label>
+                        <select class="form-control" id="stops" style="width: 150px;">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="departureTime">Departure Time</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="departureHours" min="0" style="width: 75px;">
+                            <div class="input-group-append">
+                                <span class="input-group-text">hours</span>
+                            </div>
+                            <input type="number" class="form-control" id="departureMinutes" min="0" max="59" style="width: 75px;">
+                            <div class="input-group-append">
+                                <span class="input-group-text">minutes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="arrivalTime">Arrival Time</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="arrivalHours" min="0" style="width: 75px;">
+                            <div class="input-group-append">
+                                <span class="input-group-text">hours</span>
+                            </div>
+                            <input type="number" class="form-control" id="arrivalMinutes" min="0" max="59" style="width: 75px;">
+                            <div class="input-group-append">
+                                <span class="input-group-text">minutes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const overlay = document.querySelector('.overlay');
+        const spinner = overlay.querySelector('.spinner-border');
+        const predictionResult = document.getElementById('predictionResult');
+    
+        function showOverlay() {
+            overlay.style.display = 'flex';
+            predictionResult.textContent = '';
+        }
+    
+        function hideOverlay() {
+            overlay.style.display = 'none';
+        }
+
+        function getTimePeriod(departTime) {
+    const [hours, minutes] = departTime.split(':').map(Number);
+
+    if ((hours >= 5 && hours <= 12) || (hours === 0 && minutes === 0)) {
+        return 'Morning';
+    } else if (hours >= 12 && hours <= 17) {
+        return 'Afternoon';
+    } else if (hours >= 17 && hours <= 21) {
+        return 'Evening';
+    } else if ((hours >= 21 && hours <= 24) || (hours >= 0 && hours < 5)) {
+        return 'Night';
+    } else {
+        return departTime; 
+    }
+}
+
+
+    
+        function calculateDuration(departureTime, arrivalTime) {
+            const departure_h = document.getElementById('departureHours').value;
+            const departure_m = document.getElementById('departureMinutes').value;
+            const arrival_h = document.getElementById('arrivalHours').value;
+            const arrival_m = document.getElementById('arrivalMinutes').value;
+            const hours =  Math.abs(arrival_h - departure_h);
+            const minutes = Math.abs(arrival_m - departure_m) ;
+            return `${hours}h ${minutes}m`;
+        }
+
+        function calculateDuration_In_Minutes(departureTime, arrivalTime) {
+            const departure_h = document.getElementById('departureHours').value;
+            const departure_m = document.getElementById('departureMinutes').value;
+            const arrival_h = document.getElementById('arrivalHours').value;
+            const arrival_m = document.getElementById('arrivalMinutes').value;
+            const hours = (arrival_h - departure_h)*60;
+            console.log(hours)
+            const minutes = arrival_m - departure_m;
+            const total = hours+minutes
+            return total;
+        }
+
+    
+        function predictPrice() {
+            const airlines = document.getElementById('airlines').value;
+            const departure = document.getElementById('departure').value;
+            const arrival = document.getElementById('arrival').value;
+            const ticketType = document.querySelector('input[name="ticketType"]:checked').value;
+            const departureDate = document.getElementById('departureDate').value;
+            const stops = parseInt(document.getElementById('stops').value);
+            const departureHours = document.getElementById('departureHours').value;
+            const departureMinutes = document.getElementById('departureMinutes').value;
+            const departureTime = `${departureHours}:${departureMinutes}`;
+            const arrivalHours = document.getElementById('arrivalHours').value;
+            const arrivalMinutes = document.getElementById('arrivalMinutes').value;
+            const arrivalTime = `${arrivalHours}:${arrivalMinutes}`;
+    
+            const duration = calculateDuration(departureTime, arrivalTime);
+            const time_periods = getTimePeriod(departureTime);
+            const duration_inmin = calculateDuration_In_Minutes(departureTime, arrivalTime);
+            const date = new Date(departureDate); 
+
+const monthNames = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+];
+
+const monthIndex = date.getMonth();
+const monthName = monthNames[monthIndex];
+
+console.log(`Month: ${monthName}`);
+
+            const inputData = {
+                departureDate: departureDate,
+                monthName: monthName,
+                airlines: airlines,
+                departureTime: departureTime,
+                time_periods:time_periods,
+                departure: departure,
+                duration:duration,
+                duration_inmin:duration_inmin,
+                stops: stops,
+                arrivalTime: arrivalTime,
+                arrival: arrival,
+                ticketType: ticketType,
+            };
+            const requestData = [inputData];
+            showOverlay();
+    
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(inputData)
+            })
+            .then(response => response.json())
+            .then(data => {
+            hideOverlay();
+            console.log(duration_inmin)
+
+            // Display the predicted price and inputData
+            const predictionResult = document.getElementById('predictionResult');
+            predictionResult.textContent = `Predicted Price: ${data.prediction} `;
+        });
+    }
+    </script>
+    
+</body>
+</html>
