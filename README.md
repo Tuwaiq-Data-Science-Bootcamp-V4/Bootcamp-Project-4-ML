@@ -1,15 +1,5 @@
 # تمور السعودية 🌱
-
-
-## اعضاء الفريق:
-| **هاجر** | **طيف** | **ريان** | تفاصيل
-|:---------:|:--------:|:---------:|------:
-|                  |                  |:white_check_mark:|EDA
-|:white_check_mark:|                | |Handling Outliers
-|:white_check_mark:|:white_check_mark:| |Building Models
-|                  |:white_check_mark:|:white_check_mark:|Dashboard file
-|                  |:white_check_mark:|:white_check_mark:|README file
-                                                      
+                                                    
                                                                                                        
 
 
@@ -48,3 +38,17 @@
                                                       
 <img src='pic/1.png' alt="Image" width="800px" height= "800px">
 <img src='pic/2.png' alt="Image" width="800px" height= "800px">
+
+
+
+
+
+## اعضاء الفريق :
+| **هاجر** | **طيف** | **ريان** | تفاصيل
+|:---------:|:--------:|:---------:|------:
+|                  |                  |:white_check_mark:|EDA
+|:white_check_mark:|                | |Handling Outliers
+|:white_check_mark:|:white_check_mark:| |Building Models
+|                  |:white_check_mark:|:white_check_mark:|Dashboard file
+|                  |:white_check_mark:|:white_check_mark:|README file
+  
