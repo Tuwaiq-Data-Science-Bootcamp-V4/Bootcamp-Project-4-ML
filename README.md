@@ -58,7 +58,7 @@ To clarify more, here are some images that explain the mushrooms:
 
 - How bruises look like in a mushroom:
   
-<img src="mushrooms_imgs/bruises.jpeg" alt="bruises on a mushroom" style="max-width:300px;">
+<img src="mushrooms_imgs/bruises.jpeg" alt="bruises on a mushroom" width="300">
 
 ---
 
