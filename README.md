@@ -1,27 +1,47 @@
-# Machine Learning
-### Based on what you’ve learned until now, use NumPy, pandas, matplotlib, seaborn, and scikit-learn to create a project of your choosing. 
+# ✈️ Flight Price Prediction ✈️
 
-### This project must at least satisfy the following minimum requirements:
+# 📚 Introduction
+Airlines assign prices to their services in an attempt to maximize profitability. The pricing of airline tickets has become increasingly complicated over the years.
 
-- Choose a public dataset that needs to clean and preprocess.
-- EDA
-    - Apply the essential EDA steps: head, shape, info, describe, and missing values.
-    - Display different charts that give an overview of your data.
-- Use splitting method (train-test split).
-- Choose three proper ML Algorithms.
-- Report appropriate evaluation metrics for each model.
-- Create a chart that compares the final results of your selected models.
-- Write a final conclusion and recommendations (your interpretation of the results).
-- Report your final conclusion and findings in one page (readme markdown file).
-    - Team members and their duties.
-    - Introduction (problem or your goal).
-    - Dataset Overview and Source.
-    - A table represents the final results of ML models.
-- [Nice to have - Optional] Create an interactive dashboard using Plotly.
-- Due Date: Sat, 26 Aug, at 11:00 p.m.
-- The Final presentation will be on Sunday (10 min for each group).
+## 🎯 Objectives
+The objective of the study is to analyze the flight booking dataset obtained from the "Ease My Trip" website and to conduct various statistical hypothesis tests in order to get meaningful information from it. The statistical algorithm would be used to train the dataset and predict the ticket prices of flights.
 
-### Final Deliverables:
-- Notebook file(.ipynb).
-- Dataset file.
-- README.md file.
+## 📊 Dataset Overview
+Easemytrip is an internet platform for booking flight tickets, and hence a platform that potential passengers use to buy tickets. The dataset contains information about flight booking options from the website Easemytrip for flight travel between India's top 6 metro cities. There are 300,261 datapoints and 14 features.
+
+#### **Data Source**
+- https://www.kaggle.com/datasets/shubhambathwal/flight-price-prediction
+
+ ## 🧮 Data Model
+| | Linear Regression | Random Forest Regressor | Extra Trees Regressor | Neural Network |
+|-|-|-|-|-|
+|MAE |54.13|11.52|11.55|27.51|
+|MSE |6947.62|870.21|940.88|2183.23|
+|RMSE |83.35|29.49|30.67 |46.72|
+|R^2 Score |0.90 |0.98|0.98|0.97|
+
+## 📝 Conclusion
+
+The Top Models by comparing Errors and R2_Score values are
+  1. Random Forest Regressor
+  2. Extra Trees Regressor
+  3. Neural Network
+  4. Linear Regression
+
+## 🛠️ Tools
+
+- Alteryx
+- Pandas, Seaborn, matplotlib, plotly
+- scikit-learn, Tensorflow
+- Flask
+- Random Forest Regressor
+- Extra Trees Regressor
+- Linear Regression
+- Neural Network
+
+ ## 👥 Team Members
+| Abdulmohsen | Razan  | Alwaleed |
+|-|-|-|
+|EDA and data cleaning using Alteryx |Data Visualization |Data Modeling and Deep Learning |
+|Deploy model using flask |Data Modeling | |
+| | | |
