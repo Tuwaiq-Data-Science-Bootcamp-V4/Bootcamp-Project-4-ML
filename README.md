@@ -24,7 +24,7 @@
 - Random Forest Classifier
 - Logistic Regression 
 ### دقه الخوارزميات المختارة :
-| Structured   | Semi-Structresd |
+| Algorithms   | Accuracy |
 |---|---|
 | Support Vector Machine.   | ٩٠٪  |
 | KNN. | ٨٩٪  |
