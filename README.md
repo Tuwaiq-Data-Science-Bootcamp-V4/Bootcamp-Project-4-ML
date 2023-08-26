@@ -7,7 +7,7 @@
 - EDA
     - Apply the essential EDA steps: head, shape, info, describe, and missing values.
     - Display different charts that give an overview of your data.
-- Use two splitting methods (train-test split and cross-validation split).
+- Use splitting method (train-test split).
 - Choose three proper ML Algorithms.
 - Report appropriate evaluation metrics for each model.
 - Create a chart that compares the final results of your selected models.
@@ -18,7 +18,7 @@
     - Dataset Overview and Source.
     - A table represents the final results of ML models.
 - [Nice to have - Optional] Create an interactive dashboard using Plotly.
-- Due Date: Sun, 26 Aug, at 11:00 p.m.
+- Due Date: Sat, 26 Aug, at 11:00 p.m.
 - The Final presentation will be on Sunday (10 min for each group).
 
 ### Final Deliverables:
